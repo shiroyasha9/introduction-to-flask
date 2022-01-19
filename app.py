@@ -15,9 +15,11 @@ def information():
 
 @app.route("/cat/<name>")
 def greet(name):
-    return f"<h1>This is a page for {name} with all caps is {name.upper()}!</h1>"
+    return f"<h1>100th letter {name[100]}</h1>"
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
+# first show the error without the debug = True, then with it.
+# copy debug pin and show how to use console on web
