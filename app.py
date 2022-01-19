@@ -5,7 +5,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    name = "Ginger"
+    letters = list(name)
+    cat_dictionary = {"cat_name": "Ginger"}
+    return render_template(
+        "index.html", name=name, letters=letters, cat_dictionary=cat_dictionary
+    )
 
 
 if __name__ == "__main__":
